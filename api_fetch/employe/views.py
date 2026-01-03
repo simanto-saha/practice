@@ -2,6 +2,8 @@ from django.shortcuts import render
 import requests
 from django.conf import settings
 
+
+# Retrive weather data from weather api
 def show_data(request):
     api_key = settings.OPENWEATHER_API_KEY  
     city = request.GET.get('city', 'Dhaka')
@@ -21,7 +23,7 @@ def show_data(request):
     
     return render(request, 'employe/show.html', {'data': dict_data})
 
-#this is  for 
+#this is  for my practic api from employes
 def check_api(request):
     api_key = "DKWDEL0zYJYl-oN14XEDHllQm6Pp1iqDTq4oVGxEWOM"
     id = request.GET.get('id')
